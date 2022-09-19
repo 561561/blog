@@ -5,4 +5,4 @@
 
 # 学海小记
 
-[[Python|Python]]
+[[python/Python|Python]]
