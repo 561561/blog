@@ -4,7 +4,7 @@
 
 
 
-> [GIL]([聊聊Python中的GIL - 青山牧云人 - 博客园 (cnblogs.com)](https://www.cnblogs.com/ArsenalfanInECNU/p/9968621.html))
+> 参考： [聊聊Python中的GIL - 青山牧云人 - 博客园 (cnblogs.com)](https://www.cnblogs.com/ArsenalfanInECNU/p/9968621.html)
 
 # 一、GIL 是什么
 
