@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/python/","tags":"gardenEntry","dgHomeLink":true,"dgPassFrontmatter":false}
+{"dg-publish":true,"dg-permalink":"mynote","permalink":"/mynote/","tags":"gardenEntry","dgHomeLink":true,"dgPassFrontmatter":false}
 ---
 
 
@@ -103,7 +103,7 @@ unique_5 = list(OrderedDict.fromkeys(duplicates))
 
 # 7. func(\*args, \*\*kwargs)中的 \*args, \*\*kwargs 什么意思
 
-[\*args, \*\*kwargs]([Python中的*args和**kwargs - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/50804195))
+[\*args, \*\*kwargs](https://zhuanlan.zhihu.com/p/50804195)
 
 `*args` arguments 可变数量参数列表
 `**kwargs` keyword arguments 不定长度键值对
