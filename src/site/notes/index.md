@@ -5,12 +5,4 @@
 
 # 学海小记
 
-## 后端
-
-* [[Python|Python]]
-* [[Django|Django]]
-* [[MySQL|MySQL]]
-
-## 前端
-
-test
+[[Python|Python]]
