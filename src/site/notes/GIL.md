@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-permalink":"back-end/python/","permalink":"/back-end/python/","dgHomeLink":true,"dgPassFrontmatter":false}
+{"dg-publish":true,"dg-permalink":"back-end/python/GIL","permalink":"/back-end/python/GIL/","dgHomeLink":true,"dgPassFrontmatter":false}
 ---
 
 
