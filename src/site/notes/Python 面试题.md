@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-permalink":"mynote","permalink":"/mynote/","tags":"gardenEntry","dgHomeLink":true,"dgPassFrontmatter":false}
+{"dg-publish":true,"permalink":"/python/","dgHomeLink":true,"dgPassFrontmatter":false}
 ---
 
 
