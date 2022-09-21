@@ -11,3 +11,4 @@
 [[python/GIL|GIL]]
 [[python/全局变量与局部变量|全局变量与局部变量]]
 [[python/闭包|闭包]]
+[[python/Python 面试题|Python 面试题]]
