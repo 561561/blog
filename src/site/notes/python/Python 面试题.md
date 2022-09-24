@@ -184,3 +184,59 @@ print(res)
 ## 14、Python 中生成随机整数、随机小数、0-1之间小数方法
 
 
+
+
+```python
+import random
+
+# 生成 1 - 10 之间随机整数，包括 1,10
+random.randint(1, 10)
+# 生成 0 - 9 之间随机小数
+random.uniform(0,9)
+# 生成 0 - 1 之间随机小数
+random.randint()
+```
+
+
+## 15、避免转义给字符串加哪个字母表示原始字符串？
+
+
+`r`
+
+
+## 16、`<div class="nam">中国</div>` 用正则匹配出标签里面的内容（“中国”），其中class的类名是不确定的
+
+
+```python
+import re
+
+
+str = r'<div class="nam">中国</div>'
+res = re.findall(r'<div class=".*">(.*?)</div>', str)
+print(res)
+# 输出
+# ['中国']
+```
+
+
+## 17、Python 中断言方法举例
+
+
+```python
+>>> assert True     # 条件为 true 正常执行  
+>>> assert False    # 条件为 false 触发异常  
+Traceback (most recent call last):  
+  File "<stdin>", line 1, in <module>  
+AssertionError  
+>>> assert 1==1    # 条件为 true 正常执行  
+>>> assert 1==2    # 条件为 false 触发异常  
+Traceback (most recent call last):  
+  File "<stdin>", line 1, in <module>  
+AssertionError  
+  
+>>> assert 1==2, '1 不等于 2'  
+Traceback (most recent call last):  
+  File "<stdin>", line 1, in <module>  
+AssertionError: 1 不等于 2  
+>>>
+```
