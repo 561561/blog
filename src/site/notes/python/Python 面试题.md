@@ -261,3 +261,4 @@ ls cd touch mkdir rm mv pwd cp cat which
 ## 20、Python 2 和 Python 3 的区别
 
 
+[[python/Python2和Python3的区别|Python2和Python3的区别]]
