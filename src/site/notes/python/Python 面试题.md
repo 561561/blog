@@ -240,3 +240,24 @@ Traceback (most recent call last):
 AssertionError: 1 不等于 2  
 >>>
 ```
+
+
+## 18、数据表 `student` 有 `id`， `name`， `score`， `city` 字段，其中 `name` 中的名字有重复，需要消除重复行，请写出 `sql` 语句
+
+
+```sql
+select distinct name from student
+```
+
+
+## 19、10个 Linux 常用命令
+
+
+```
+ls cd touch mkdir rm mv pwd cp cat which
+```
+
+
+## 20、Python 2 和 Python 3 的区别
+
+
