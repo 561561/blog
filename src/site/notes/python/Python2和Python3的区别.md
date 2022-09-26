@@ -23,3 +23,5 @@ print('hello world')
 
 Python 2 ASCII 编码
 Python 3 Unicode 编码
+
+[[computerbasic/编码|编码]]
