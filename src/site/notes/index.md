@@ -7,7 +7,7 @@
 # 学海小记
 
 
-## [[python/Python|Python]]
+## Python
 
 
 [[python/装饰器|装饰器]]
