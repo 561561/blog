@@ -185,7 +185,6 @@ print(res)
 
 
 
-
 ```python
 import random
 
@@ -262,3 +261,97 @@ ls cd touch mkdir rm mv pwd cp cat which
 
 
 [[python/Python2和Python3的区别|Python2和Python3的区别]]
+
+
+## 21、列出python中可变数据类型和不可变数据类型，并简述原理
+
+
+不可变数据类型：数值型、字符串 string 和元组 tuple
+
+不允许变量的值发生变化，如果改变了变量的值，相当于是新建了一个对象，而对于相同的值的对象，在内存中则只有一个对象（一个地址），如下图用 id() 方法可以打印对象的 id
+
+```python
+>>> a = 1
+>>> b = 1
+>>> id(a)
+1751018512
+>>> id(b)
+1751018512
+>>> a = 2
+>>> id(a)
+1751018544
+```
+
+可变数据类型：列表 list 和字典 dict
+
+允许变量的值发生变化，即如果对变量进行append、+=等这种操作后，只是改变了变量的值，而不会新建一个对象，变量引用的对象的地址也不会变化，不过对于相同的值的不同对象，在内存中则会存在不同的对象，即每个对象都有自己的地址，相当于内存中对于同值的对象保存了多份，这里不存在引用计数，是实实在在的对象。
+
+```python
+>>> a = [1, 2]
+>>> b = [1, 2]
+>>> id(a)
+1527966899592
+>>> id(b)
+1527966899976
+```
+
+## 22、s = "ajldjlajfdljfddd"，去重并从小到大排序输出"adfjl"
+
+
+```python
+s = 'ajldjlajfdljfddd'
+s = list(set(s))
+s.sort()
+res = ''.join(s)
+```
+
+
+## 23、用 lambda 函数实现两个数相乘
+
+
+```python
+>>> mul = lambda a, b: a * b
+>>> mul(2, 3)
+6
+```
+
+
+## 24、字典根据键从小到大排序
+
+
+```python
+numbers={'first': 1, 'second': 2, 'third': 3, 'Fourth': 4}
+```
+
+根据字典的键排序
+
+```python
+>>> sorted(numbers)
+['Fourth', 'first', 'second', 'third']
+```
+
+根据字典的值排序
+
+```python
+>>> sorted(numbers.values())
+[1, 2, 3, 4]
+```
+
+根据字典的值对字典的键进行排序
+
+```python
+>>> sorted(numbers, key=numbers.__getitem__)
+# In order of sorted values: [1, 2, 3, 4]
+['first', 'second', 'third', 'Fourth']
+```
+
+根据字典的键对字典的值进行排序
+
+```python
+>>> [value for (key, value) in sorted(numbers.items())]
+[4, 1, 2, 3]
+# In order of sorted keys: ['Fourth', 'first', 'second', 'third']
+```
+
+
+[如何根据字典的键或值来排序_冯西的技术博客的博客-程序员宝宝_字典根据键从小到大排序 - 程序员宝宝 (cxybb.com)](https://www.cxybb.com/article/xibeichengf/52015355#:~:text=%E5%A6%82%E6%9E%9C%E6%88%91%E4%BB%AC%E6%83%B3%E6%A0%B9%E6%8D%AE%E5%AD%97%E5%85%B8%E7%9A%84%E9%94%AE%E6%9D%A5%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%EF%BC%8C%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95%E6%98%AF%E4%BD%BF%E7%94%A8Python%E7%9A%84%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0sorted,%28%29%EF%BC%8C%E8%AF%A5%E5%87%BD%E6%95%B0%E6%8E%A5%E6%94%B6%E4%B8%80%E4%B8%AAiterable%EF%BC%8C%E5%B9%B6%E8%BF%94%E5%9B%9E%E5%B7%B2%E6%8E%92%E5%A5%BD%E5%BA%8F%E7%9A%84%E5%88%97%E8%A1%A8%EF%BC%88%E9%BB%98%E8%AE%A4%E6%83%85%E5%86%B5%E4%B8%8B%E6%98%AF%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7%E6%8E%92%E5%BA%8F%EF%BC%89%E3%80%82)
