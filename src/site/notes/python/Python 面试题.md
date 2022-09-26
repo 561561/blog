@@ -353,5 +353,26 @@ numbers={'first': 1, 'second': 2, 'third': 3, 'Fourth': 4}
 # In order of sorted keys: ['Fourth', 'first', 'second', 'third']
 ```
 
+无视大小写
+
+```python
+>>> sorted(numbers, key=str.lower)
+['first', 'Fourth', 'second', 'third']
+```
 
 [如何根据字典的键或值来排序_冯西的技术博客的博客-程序员宝宝_字典根据键从小到大排序 - 程序员宝宝 (cxybb.com)](https://www.cxybb.com/article/xibeichengf/52015355#:~:text=%E5%A6%82%E6%9E%9C%E6%88%91%E4%BB%AC%E6%83%B3%E6%A0%B9%E6%8D%AE%E5%AD%97%E5%85%B8%E7%9A%84%E9%94%AE%E6%9D%A5%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%EF%BC%8C%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95%E6%98%AF%E4%BD%BF%E7%94%A8Python%E7%9A%84%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0sorted,%28%29%EF%BC%8C%E8%AF%A5%E5%87%BD%E6%95%B0%E6%8E%A5%E6%94%B6%E4%B8%80%E4%B8%AAiterable%EF%BC%8C%E5%B9%B6%E8%BF%94%E5%9B%9E%E5%B7%B2%E6%8E%92%E5%A5%BD%E5%BA%8F%E7%9A%84%E5%88%97%E8%A1%A8%EF%BC%88%E9%BB%98%E8%AE%A4%E6%83%85%E5%86%B5%E4%B8%8B%E6%98%AF%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7%E6%8E%92%E5%BA%8F%EF%BC%89%E3%80%82)
+
+
+## 25、利用 collections 库的 Counter 方法统计字符串每个单词出现的次数"kjalfj;ldsjafl;hdsllfdhg;lahfbl;hl;ahlf;h"
+
+
+```python
+from collections import Counter
+
+a = "kjalfj;ldsjafl;hdsllfdhg;lahfbl;hl;ahlf;h"
+res = Counter(a)
+# Counter({'l': 9, ';': 6, 'h': 6, 'f': 5, 'a': 4, 'j': 3, 'd': 3, 's': 2, 'k': 1, 'g': 1, 'b': 1})
+```
+
+
+## 26、字符串 a = "not 404 found 张三 99 深圳"，每个词中间是空格，用正则过滤掉英文和数字，最终输出"张三 深圳"
