@@ -113,3 +113,141 @@ print("电话号码是 : ", num)
 # 电话号码是: 2004-959-559 
 # 电话号码是 : 2004959559
 ```
+
+```python
+import re 
+
+# 将匹配的数字乘以 2 
+def double(matched): 
+    value = int(matched.group('value')) 
+    return str(value * 2) 
+s = 'A23G4HFD567' 
+print(re.sub('(?P<value>\d+)', double, s))
+```
+
+### `(?P...)` 分组匹配
+
+例：身份证 1102231990xxxxxxxx
+
+```python
+import re
+s = '1102231990xxxxxxxx'
+res = re.search('(?P<province>\d{3})(?P<city>\d{3})(?P<born_year>\d{4})',s)
+print(res.groupdict())
+
+# 输出
+# {'province': '110', 'city': '223', 'born_year': '1990'}
+```
+
+
+## re.compile
+
+
+```python
+import re
+
+s = 'one12twothree34four'
+pattern = re.compile(r'\d+')
+m = pattern.match(s)
+print(m)
+# 输出
+# None
+
+m = pattern.match(s, 2, 10)
+print(m)
+# 输出
+# None
+
+m = pattern.match(s, 3, 10)
+print(m)
+# 输出
+# <_sre.SRE_Match object at 0x10a42aac0>
+
+>>> m.group(0) # 可省略 0 
+'12' 
+>>> m.start(0) # 可省略 0 
+3 
+>>> m.end(0) # 可省略 0 
+5 
+>>> m.span(0) # 可省略 0 
+(3, 5)
+```
+
+
+## re.findall
+
+
+```python
+import re
+
+pattern = re.compile(r'\d+')   # 查找数字
+result1 = pattern.findall('runoob 123 google 456')
+result2 = pattern.findall('run88oob123google456', 0, 10)
+  
+
+print(result1)
+print(result2)
+
+# 输出
+# ['123', '456']
+# ['88', '12']
+```
+
+```python
+import re
+
+result = re.findall(r'(\w+)=(\d+)', 'set width=20 and height=10')
+
+print(result)
+
+# 输出
+# [('width', '20'), ('height', '10')]
+```
+
+
+## re.finditer
+
+
+```python
+import re 
+it = re.finditer(r"\d+","12a32bc43jf3") 
+for match in it: 
+    print(match.group())
+
+# 输出
+# 12 
+# 32 
+# 43 
+# 3
+```
+
+
+`findall` 返回列表
+
+`finditer` 换回迭代器
+
+
+## re.split
+
+
+```python
+import re
+
+print(re.split('\W+', 'runoob.'))
+print(re.split('\W+', 'runoob, runoob, runoob.'))
+print(re.split('(\W+)', 'runoob.'))
+print(re.split('(\W+)', ' runoob, runoob, runoob.'))
+# 参数 1 为分割次数
+print(re.split('\W+', ' runoob, runoob, runoob.', 1))
+```
+
+输出
+
+```python
+['runoob', '']
+['runoob', 'runoob', 'runoob', ''] 
+['runoob', '.', '']
+['', ' ', 'runoob', ', ', 'runoob', ', ', 'runoob', '.', ''] 
+['', 'runoob, runoob, runoob.']
+```
+
