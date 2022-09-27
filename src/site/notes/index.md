@@ -16,6 +16,7 @@
 [[python/闭包|闭包]]
 [[python/Python 面试题|Python 面试题]]
 [[python/Python2和Python3的区别|Python2和Python3的区别]]
+[[python/Python Re 模块|Python Re 模块]]
 
 
 ## 计算机基础
