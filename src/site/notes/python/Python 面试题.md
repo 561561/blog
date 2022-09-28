@@ -376,3 +376,294 @@ res = Counter(a)
 
 
 ## 26、字符串 a = "not 404 found 张三 99 深圳"，每个词中间是空格，用正则过滤掉英文和数字，最终输出"张三 深圳"
+
+
+```python
+import re
+
+a = "not 404 found 张三 99 深圳"
+res = re.split('[0-9a-z ]+', a)
+s = ' '.join(res).strip()
+```
+
+[[python/Python Re 模块|Python Re 模块]]
+
+[[computerbasic/正则表达式|正则表达式]]
+
+
+## 27、filter 方法求出列表所有奇数并构造新列表，`a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`
+
+
+```python
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def fn(a):
+    return a % 2 == 1
+
+newlist = list(filter(fn, a))
+```
+
+
+## 28、列表推导式求列表所有奇数并构造新列表，`a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`
+
+
+```python
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+newlist = [i for i in a if i % 2 == 1]
+```
+
+
+## 29、re.complie 作用
+
+
+`re.compile` 是将正则表达式编译成一个对象，加快速度，并重复使用
+
+
+## 30、a=（1，）b=(1)，c=("1") 分别是什么类型的数据？
+
+
+```python
+>>> a = (1,)
+>>> b = (1)
+>>> c = ("1")
+>>> type(a)
+<class 'tuple'>
+>>> type(b)
+<class 'int'>
+>>> type(c)
+<class 'str'>
+```
+
+
+## 31、两个列表 `[1,5,7,9]` 和 `[2,2,6,8]` 合并为 `[1,2,2,3,6,7,8,9]`
+
+
+```python
+>>> l1 = [1, 5, 7, 9]
+>>> l2 = [2, 2, 6, 8]
+>>> l1.extend(l2)
+>>> l1
+[1, 5, 7, 9, 2, 2, 6, 8]
+>>> l1.sort()
+>>> l1
+[1, 2, 2, 5, 6, 7, 8, 9]
+```
+
+
+## 32、用 python 删除文件和用 linux 命令删除文件方法
+
+
+python: `os.remove('文件名')`
+
+linux: `rm 文件名`
+
+
+## 33、datetime模块打印当前时间戳
+
+
+```python
+import datetime
+
+a = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+```
+
+
+## 34、数据库优化查询方法
+
+
+## 35、统计图绘制的开源库
+
+
+pyecharts
+
+matplotlib
+
+
+## 36、写一段自定义异常代码
+
+
+```python
+try:
+    for i in range(5):
+        if i > 2:
+            raise Exception('数字大于 2 了')
+except Exception as e:
+    print(e)
+```
+
+
+## 37、正则表达式匹配中，`(.*)` 和 `(.*?)` 匹配区别？
+
+
+[[computerbasic/正则表达式|正则表达式]]
+
+
+## 38、简述 Django 的 orm
+
+
+ORM，即 Object-Relational Mapping（对象关系映射），它的作用是在关系型数据库和业务实体对象之间作一个映射，这样，我们在具体的操作业务对象的时候，就不需要再去和复杂的SQL语句打交道，只需简单的操作对象的属性和方法。
+
+
+## 39、`[[1, 2], [3, 4], [5, 6]]` 一行代码展开该列表，得到 `[1, 2, 3, 4, 5, 6]`
+
+
+```python
+a = [[1, 2], [3, 4], [5, 6]]
+b = [j for i in a for j in i]
+```
+
+
+## 40、`x="abc",y="def",z=["d","e","f"]`, 分别求出`x.join(y)`和`x.join(z)`返回的结果
+
+
+```pyhton
+x = 'abc'
+y = 'def'
+z = ["d", "e", "f"]
+
+m = x.join(y)
+y = x.join(z)
+
+# m 'dabceabcf'
+# n 'dabceabcf'
+```
+
+
+## 41、举例说明异常模块中try except else finally的相关意义
+
+
+`try...except...else` 没有捕获到异常，执行 `else` 语句
+
+`try...except...finally` 不管是否捕获到异常，都执行 `finally` 语句
+
+
+## 42、python中交换两个数值
+
+
+```python
+a, b = 3, 4
+a, b = b, a
+```
+
+
+## 43、举例说明 `zip()` 函数用法
+
+
+`zip()` 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表。
+
+如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 * 号操作符，可以将元组解压为列表。
+
+```python
+>>> a = [1,2,3]  
+>>> b = [4,5,6]  
+>>> c = [4,5,6,7,8]  
+>>> zipped = zip(a,b)     # 返回一个对象  
+>>> zipped  
+<zip object at 0x103abc288>  
+>>> list(zipped)  # list() 转换为列表  
+[(1, 4), (2, 5), (3, 6)]  
+>>> list(zip(a,c))              # 元素个数与最短的列表一致  
+[(1, 4), (2, 5), (3, 6)]  
+  
+>>> a1, a2 = zip(*zip(a,b))          # 与 zip 相反，zip(*) 可理解为解压，返回二维矩阵式  
+>>> list(a1)  
+[1, 2, 3]  
+>>> list(a2)  
+[4, 5, 6]  
+>>>
+```
+
+
+## 44、a="张明 98分"，用re.sub，将98替换为100
+
+
+```python
+import re
+
+a = '张明 98分'
+res = re.sub(r'\d+', '100', a)
+print(res)
+
+# 输出
+# 张明 100分
+```
+
+
+## 45、写 5 条常用 sql 语句
+
+
+## 46、`a="hello"` 和 `b="你好"` 编码成 bytes 类型
+
+
+```python
+a = 'hello'
+b = '你好'
+
+a = a.encode()
+b = b.encode()
+
+print(a)
+print(b)
+
+print(type(a))
+print(type(b))
+
+# 输出
+# b'hello' 
+# b'\xe4\xbd\xa0\xe5\xa5\xbd' 
+# <class 'bytes'> 
+# <class 'bytes'>
+```
+
+
+## 47、`[1, 2, 3] + [4, 5, 6]` 的结果是多少？
+
+
+两个列表相加，等价于 extend
+
+结果是 `[1, 2, 3, 4, 5, 6]`
+
+
+## 48、提高 python 运行效率的方法
+
+
+使用生成器，因为可以节约大量内存
+
+循环代码优化，避免过多重复代码的执行
+
+核心模块用 Cython PyPy 等，提高效率
+
+多进程、多线程、协程
+
+多个 `if elif` 条件判断，可以把最有可能先发生的条件放到前面写，这样可以减少程序判断的次数，提高效率
+
+
+## 49、简述 mysql 和 redis 的区别
+
+
+redis： 内存型非关系数据库，数据保存在内存中，速度快
+
+mysql：关系型数据库，数据保存在磁盘中，检索的话，会有一定的 IO 操作，访问速度相对慢
+
+
+## 50、遇到 bug 如何处理
+
+
+## 51、正则匹配，匹配日期 2018-03-20
+
+
+```python
+import re
+
+url = 'https://sycm.taobao.com/bda/tradinganaly/overview/get_summary.json?dateRange=2018-03-20%7C2018-03-20&dateType=recent1&device=1&token=ff25b109b&_=1521595613462'
+
+res = re.findall(r'(\d{4})-(\d{2})-(\d{2})', url)
+print(res)
+
+# 输出
+# [('2018', '03', '20'), ('2018', '03', '20')]
+```
+
+
+## 52、
