@@ -666,4 +666,40 @@ print(res)
 ```
 
 
-## 52、
+## 52、`list=[2, 3, 5, 4, 9, 6]`，从小到大排序，不许用sort，输出 `[2, 3, 4, 5, 6, 9]`
+
+
+[[Python 排序算法|Python 排序算法]]
+
+
+## 53、写一个单例模式
+
+
+```python
+class Singleton:
+    _instance = None
+
+    def __new__(cls):
+        if not cls._instance:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+a = Singleton()
+b = Singleton()
+
+print(id(a))
+print(id(b))
+
+# 输出
+# 1743947778424 
+# 1743947778424
+```
+
+
+## 54、保留两位小数 `a = "%.03f"%1.3335`
+
+
+```python
+a = "%.03f"%1.3335
+```
+
