@@ -156,7 +156,7 @@ Python 2 返回列表，Python 3 返回迭代器
 ## 11、简述面向对象中 `__new__` 和 `__init__` 的区别
 
 
-[[__new__、__init__|__new__、__init__]]
+[[python/__new__、__init__|__new__、__init__]]
 
 
 ## 12、with方法打开处理文件帮我我们做了什么？
