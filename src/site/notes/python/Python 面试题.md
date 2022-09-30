@@ -700,6 +700,140 @@ print(id(b))
 
 
 ```python
-a = "%.03f"%1.3335
+>>> f = 2.644193648863
+# round 函数
+>>> new = round(f, 2)
+>>> print(new)
+2.64
+
+# 字符串格式化
+>>> s = '%.2f'%f
+>>> s
+'2.64'
+>>>
 ```
+
+
+## 55、求三个方法打印结果
+
+
+```python
+def fn(k, v, dic={}):
+	dic[k] = v
+	print(dic)
+
+fn('one', 1)
+fn('two', 2)
+fn('three', 3, {})
+fn('four', 4)
+```
+
+```python
+{'one': 1} 
+{'one': 1, 'two': 2} 
+{'three': 3} 
+{'one': 1, 'two': 2, 'four': 4}
+```
+
+
+## 56、列出常见的状态码和意义
+
+
+## 57、分别从前端、后端、数据库阐述web项目的性能优化
+
+
+## 58、使用 pop 和 del 删除字典中的 "name" 字段，dic={"name":"zs","age":18}
+
+
+```python
+dic={"name":"zs","age":18}
+dic.pop("name")
+print(dic)
+
+
+dic={"name":"zs","age":18}
+del dic["name"]
+print(dic)
+```
+
+```python
+{'age': 18} 
+{'age': 18}
+```
+
+
+## 59、列举常见 MySQL 数据存储引擎
+
+
+## 60、计算代码运行结果
+
+
+```python
+a = zip(('a', 'b', 'c', 'd', 'e'), (1, 2, 3, 4, 5))
+a0 = dict(a)
+a1 = range(10)
+a2 = [i for i in a1 if i in a0]
+a3 = [a0[s] for s in a0]
+
+print(a)
+print(a0)
+print(a1)
+print(a2)
+print(a3)
+```
+
+```python
+<zip object at 0x000001960A53F548> 
+{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5} 
+range(0, 10) 
+[] 
+[1, 2, 3, 4, 5]
+```
+
+
+## 61、简述同源策略
+
+
+## 62、简述cookie和session的区别
+
+
+## 63、简述多线程、多进程
+
+
+## 64、简述 any() 和 all() 方法
+
+
+any():只要迭代器中有一个元素为真就为真
+
+all():迭代器中所有的判断项返回都是真，结果才为真
+
+python中什么元素为假？
+
+答案：（0，空字符串，空列表、空字典、空元组、None, False）
+
+
+## 65、IOError、AttributeError、ImportError、IndentationError、IndexError、KeyError、SyntaxError、NameError分别代表什么异常
+
+
+IOError：输入输出异常
+
+AttributeError：试图访问一个对象没有的属性
+
+ImportError：无法引入模块或包，基本是路径问题
+
+IndentationError：语法错误，代码没有正确的对齐
+
+IndexError：下标索引超出序列边界
+
+KeyError:试图访问你字典里不存在的键
+
+SyntaxError:Python代码逻辑语法出错，不能执行
+
+NameError:使用一个还未赋予对象的变量
+
+
+## 66、python 中 copy 和 deepcopy 区别
+
+
+
 
