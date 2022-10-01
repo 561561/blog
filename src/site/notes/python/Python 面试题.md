@@ -388,7 +388,7 @@ s = ' '.join(res).strip()
 
 [[python/Python Re 模块|Python Re 模块]]
 
-[[computerbasic/正则表达式|正则表达式]]
+[[computer_basic/正则表达式|正则表达式]]
 
 
 ## 27、filter 方法求出列表所有奇数并构造新列表，`a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`
@@ -496,7 +496,7 @@ except Exception as e:
 ## 37、正则表达式匹配中，`(.*)` 和 `(.*?)` 匹配区别？
 
 
-[[computerbasic/正则表达式|正则表达式]]
+[[computer_basic/正则表达式|正则表达式]]
 
 
 ## 38、简述 Django 的 orm
