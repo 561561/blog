@@ -23,8 +23,8 @@
 ## 计算机基础
 
 
-[[computerbasic/编码|编码]]
-[[computerbasic/正则表达式|正则表达式]]
+[[computer_basic/编码|编码]]
+[[computer_basic/正则表达式|正则表达式]]
 
 
 ## 数据结构与算法（Python）
@@ -33,7 +33,7 @@
 > 参考 [Problem Solving with Algorithms and Data Structures using Python — Problem Solving with Algorithms and Data Structures (runestone.academy)](https://runestone.academy/ns/books/published/pythonds/index.html)
 
 
-1. [[抽象数据类型和面向对象编程|抽象数据类型和面向对象编程]]
+1. [[data_structures_and_algorithms/抽象数据类型和面向对象编程|抽象数据类型和面向对象编程]]
 
 
 ## 开发环境
