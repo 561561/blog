@@ -868,9 +868,17 @@ NameError:使用一个还未赋予对象的变量
 <class 'generator'>
 ```
 
-[[生成器|生成器]]
+[[python/Python 容器、可迭代对象、迭代器和生成器|Python 容器、可迭代对象、迭代器和生成器]]
 
 
+## 70、`a = " hehheh "`, 去除收尾空格
+
+
+```python
+
+```
+
+>[Python中常见字符串去除空格的方法总结 - FANDX - 博客园 (cnblogs.com)](https://www.cnblogs.com/fandx/p/9311755.html)
 
 
 
